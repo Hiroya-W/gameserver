@@ -15,4 +15,5 @@ RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
 #RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt \
 #   && rm -rf /tmp/pip-tmp
 
-RUN curl -sSL https://install.python-poetry.org | POETRY_HOME=/home/vscode/.local python3 -
+RUN curl -sSL https://install.python-poetry.org | POETRY_HOME=/home/vscode/.poetry python3 -
+ENV PATH="/home/vscode/.poetry/bin:${PATH}"
